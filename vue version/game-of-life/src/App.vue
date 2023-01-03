@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>helor</h1>
     <GameLife>a</GameLife>
-      <HelloWorld msg = "WELCOME" />
   </div>
 </template>
 
