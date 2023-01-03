@@ -15,8 +15,7 @@ clone repo
 
 ``` 
 cd python
-pip install -r requirements.txt
-python3 jogo_da_vida.py
+python3 game-of-life.py
 ```
 * to start the game press the space bar
 * The game in Python looks like this:
