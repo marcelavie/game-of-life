@@ -11,7 +11,8 @@ pygame.init()
 pygame.display.set_caption("joguinho da vida")
 
 
-def update(tela, cells, tamanho, progresso=False):
+def update(tela, cells, progresso=False):
+    tamanho = 10 
     updated_cells = numpy.zeros((cells.shape[0], cells.shape[1]))
 
     for row, col in numpy.ndindex(cells.shape):
@@ -43,7 +44,7 @@ def main():
 
     cells = numpy.zeros((60, 80))
     tela.fill(cor_tabuleiro)
-    update(tela, cells, 10)
+    update(tela, cells)
 
     pygame.display.flip()
     pygame.display.update()
@@ -63,13 +64,13 @@ def main():
             if pygame.mouse.get_pressed()[0]:
                 pos = pygame.mouse.get_pos()
                 cells[pos[1] // 10, pos[0] // 10] = 1
-                update(tela, cells, 10)
+                update(tela, cells)
                 pygame.display.update()
 
         tela.fill(cor_tabuleiro)
 
         if running:
-            cells = update(tela, cells, 10, progresso=True)
+            cells = update(tela, cells, progresso=True)
             pygame.display.update()
 
         time.sleep(0.001)
