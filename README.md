@@ -12,6 +12,22 @@ The initial configuration of cells can be created by a human, but all generation
 ## Python Version
 
 clone repo
-cd 'python version'
+
+``` 
+cd python
 pip install -r requirements.txt
 python3 jogo_da_vida.py
+```
+* to start the game press the space bar
+* The game in Python looks like this:
+## VUE.JS
+* clone the repository
+```
+cd vue
+cd gameoflife
+npm install 
+```
+ **to fix the files: npm run lint or npm run lint --fix**
+ ```
+ npm run serve
+ ```
