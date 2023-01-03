@@ -7,3 +7,11 @@ Any live cell with more than three live neighbours dies (referred to as overpopu
 Any live cell with two or three live neighbours lives, unchanged, to the next generation.
 Any dead cell with exactly three live neighbours comes to life.
 The initial configuration of cells can be created by a human, but all generations thereafter are completely determined by the above rules. The goal of the game is to find patterns that evolve in interesting ways – something that people have now been doing for over 50 years.
+
+
+## Python Version
+
+clone repo
+cd 'python version'
+pip install -r requirements.txt
+python3 jogo_da_vida.py
