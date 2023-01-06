@@ -14,11 +14,13 @@ The initial configuration of cells can be created by a human, but all generation
 clone repo
 
 ``` 
-cd python
-python3 game-of-life.py
+cd 'python version'
+python3 main.py
 ```
 * to start the game press the space bar
-* The game in Python looks like this:
+* Game in Python:
+
+![Peek 03-01-2023 20-26](https://user-images.githubusercontent.com/104442692/210458869-d9da37a4-f0be-4966-be0e-c0058eaff041.gif)
 ## VUE.JS
 * clone the repository
 ```
