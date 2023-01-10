@@ -14,6 +14,7 @@
 </template>
 
 <script>
+
 function _count_vizinhos_vivos(i, j, grid) {
   const [M, N] = [grid.length, grid[0].length];
   const delta_coord = [
@@ -64,36 +65,35 @@ function _nextState(grid) {
   return newGrid;
 }
 export default {
-    name: 'GameLife',
-    data () {
-        return {
-            grid: [
-                [0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0,0],
-            ]
-        }
-    },
-methods: {
+  name: "GameOfLife",
+  data() {
+    return {
+      grid: [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+        [0, 0, 1, 0, 1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+        [1, 0, 1, 0, 0, 0, 1, 1, 1, 0],
+        [1, 1, 0, 0, 0, 0, 1, 1, 0, 0],
+        [1, 0, 0, 0, 0, 0, 1, 0, 1, 1],
+      ],
+    };
+  },
+  methods: {
     nextstep() {
       this.grid = _nextState(this.grid);
     },
   },
-mounted() {
+  mounted() {
     Window.HelloWorld = this;
     setInterval(() => {
       this.nextstep();
     }, 1000);
   },
-}
-
-
+};
 </script> 
 
 <style>
