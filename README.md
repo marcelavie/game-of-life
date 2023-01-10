@@ -24,8 +24,8 @@ python3 main.py
 ## VUE.JS
 * clone the repository
 ```
-cd vue
-cd gameoflife
+cd vue-version
+cd game-of-life
 npm install 
 ```
  **to fix the files: npm run lint or npm run lint --fix**
