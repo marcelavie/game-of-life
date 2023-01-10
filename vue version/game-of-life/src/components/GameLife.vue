@@ -1,11 +1,16 @@
 <template>
-    <div>
-        <table>
-            <tr v-for="(line, i) in grid" :key="i">
-                <td v-for="cell in line" :key="cell" :class="{celViva: cell==1}"></td>
-            </tr>
-        </table>
-    </div>
+  <div class="centralizar">
+    <table>
+      <tr v-for="(line, i) in grid" :key="i" class="grid">
+        <td
+          v-for="(cell, j) in line"
+          :key="j"
+          :class="{ vivo: cell == 1 }"
+          class="grid"
+        ></td>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -56,8 +61,8 @@ function _nextState(grid) {
       }
     }
   }
-}
   return newGrid;
+}
 export default {
     name: 'GameLife',
     data () {
@@ -92,13 +97,28 @@ mounted() {
 </script> 
 
 <style>
-table, th, td {
-    border: 1px solid;
+.grid {
+  border: rgb(244, 169, 252) 0.2px solid;
+  border-collapse: separate;
+  width: 30px;
+  height: 30px;
+  display: revert;
+  border-radius: 1px;
 }
-.celViva{
-    background-color: rgb(31, 245, 35);
+
+.tabuleiro_linha {
+  margin: 0;
+  display: flex;
 }
-.celMorta{
-    background-color: rgb(124, 137, 149);
+.centralizar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+table {
+  border-spacing: 0;
+}
+.vivo {
+  background-color: rgb(202, 23, 229);
 }
 </style>
